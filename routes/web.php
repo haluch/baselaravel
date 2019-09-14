@@ -21,3 +21,4 @@ Route::get('/test', function () {
 });
 
 Route::get('events', 'EventController@index');
+route::get('pdf','pdfController@pdfProduto');
