@@ -20,3 +20,4 @@ Route::get('/test', function () {
     return view('blank');
 });
 
+Route::get('events', 'EventController@index');
