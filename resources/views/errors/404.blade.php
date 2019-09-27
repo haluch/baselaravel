@@ -1,5 +1,5 @@
-@extends('layout.master')
-@section('title','ERRO')
+@extends('layout.clean')
+@section('title','Erro')
 @section('screen','404')
 @section('content')
 <div class="text-center mt-5">

@@ -1,7 +1,12 @@
 <?php
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/', function () {
-    return view('blank');
+    if (Auth::user()){
+        return view('blank');
+    }else{
+       return redirect('/login');
+    }
 });
 
 Route::get('/register', function () {
@@ -22,3 +27,6 @@ Route::get('/test', function () {
 
 Route::get('events', 'EventController@index');
 route::get('pdf','pdfController@pdfProduto');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
