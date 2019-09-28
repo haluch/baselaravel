@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', env('APP_NAME') )</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -10,17 +11,17 @@
     @yield('css')
 </head>
 
-<body id="page-top">
+<body id="page-top" class=' bg-dark'>
     <div id="wrapper">
-        <div class="d-flex flex-column" id="content-wrapper">
+        <div class="d-flex flex-column  bg-dark" id="content-wrapper">
             <div id="content">
                 <div class="container-fluid">
                    @include('errors.flash-message')
                    @yield('content')
                 </div>
             </div>
-            <footer class="bg-white sticky-footer">
-                <div class="container my-auto">
+            <footer class=" sticky-footer  bg-dark">
+                <div class="container my-auto ">
                     <div class="text-center my-auto copyright"><span>Copyright © {{ env('APP_NAME') }} @php echo date('Y'); @endphp</span></div>
                 </div>
             </footer>

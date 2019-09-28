@@ -1,6 +1,7 @@
 @extends('layout.clean')
 
 @section('content')
+<br><br><br><br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -54,6 +55,7 @@
                                 <button type="submit" class="btn btn-primary">
                                    Reset password
                                 </button>
+                                <a href="{{ route('login') }}" class='btn btn-link'>Login</a>
                             </div>
                         </div>
                     </form>

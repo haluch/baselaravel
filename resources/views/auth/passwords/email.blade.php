@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+<br><br><br><br>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -36,6 +37,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     Enviar senha para email informado
                                 </button>
+                                <a href="{{ route('login') }}" class='btn btn-link'>Login</a>
                             </div>
                         </div>
                     </form>
